@@ -1,0 +1,90 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window  = Library.CreateLib("Universal Game Script", "Ocean")
+    -- MAIN
+    local Main = Window:NewTab("Main")
+    local MainSection = Main:NewSection("Main")
+
+
+
+    MainSection:NewToggle("Walkspeed and Jumppower", "120 walkspeed and 120 jumppower", function(state)
+        if state then
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 120
+            game.Players.LocalPlayer.Character.Humanoid.JumpPower = 120
+        else
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+            game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+        end
+    end)
+
+    MainSection:NewButton("Infinite Yield", "FE Admin Commands", function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+    end)
+
+
+    --LOCAL PLAYER
+    local Player = Window:NewTab("Player")
+    local PlayerSection = Player:NewSection("Player")
+
+    PlayerSection:NewSlider("Walkspeed", "SPEED!!", 500, 16, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+    end)
+
+    PlayerSection:NewSlider("Jumppower", "JUMP HIGH!!", 350, 50, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+    end)
+
+    PlayerSection:NewButton("Reset WS/JP", "Resets to all defaults", function()
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    end)
+    
+    PlayerSection:NewButton("Fly (E Toggle)", "Makes you fly", function()
+    loadstring(game:HttpGet(('https://pastebin.com/raw/wxTkt04m'),true))()
+    end)
+
+PlayerSection:NewButton("Infinite Jump", "Makes you jump infinitely in the air", function()
+    loadstring(game:HttpGet(('https://pastebin.com/raw/V3DKCQTT'),true))()
+    end)
+    
+ 
+    PlayerSection:NewButton("Noclip (F Toggle)", "Go through walls", function()
+    loadstring(game:HttpGet(('https://pastebin.com/raw/MscaRtGe'),true))()
+    end)
+
+
+    --Other
+    local Other = Window:NewTab("Other")
+    local OtherSection = Other:NewSection("Other")
+
+
+    OtherSection:NewButton("Anti-AFK", "Prevents you from getting kick from idle 20 minutes", function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/RTrade/Voidz/main/AntiAFK.lua'),true))()
+    end)
+    
+    OtherSection:NewButton("Rejoin Game", "Rejoins the game (DO NOT DO IN A SERVER ALONE)", function()
+        loadstring(game:HttpGet(('https://pastebin.com/raw/yVdXMaFy'),true))()
+    end)
+    
+    OtherSection:NewButton("Anti-Kick (Localscripts only)", "Prevents you from getting kicked", function()
+    loadstring(game:HttpGet(('https://pastebin.com/raw/ufTFWycB'),true))()
+    end)
+    
+    OtherSection:NewButton("Server Hop", "Join another server", function()
+    loadstring(game:HttpGet(('https://pastebin.com/raw/5piLnpyD'),true))()
+    end)
+    OtherSection:NewButton("Fullbright", "Makes it bright", function()
+    loadstring(game:HttpGet(('https://pastebin.com/raw/06iG6YkU'),true))()
+    end)
+
+    --Teleports
+    local Teleports        = Window:NewTab("Teleports")
+    local TeleportsSection = Teleports:NewSection("Teleports")
+    
+    TeleportsSection:NewButton("Teleport Tool", "Teleports you anywhere you click when equipped", function()
+    loadstring(game:HttpGet(('https://pastebin.com/raw/iMKYkmcu'),true))()
+    end)
+
+    TeleportsSection:NewButton("Teleport to random player", "Teleports you to a random player", function()
+        loadstring(game:HttpGet(('https://pastebin.com/raw/Dt42DBR4'),true))()
+    end)
+    
